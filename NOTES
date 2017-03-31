@@ -1,0 +1,11 @@
+I delete ra ang mga apps.py inside the app
+
+for example 
+	apps
+		appname
+			apps.py
+
+I delete ra kai ma conflict siya
+
+pero make sure nga i register nimo ang apps sa settings sa INSTALLED_APPS nga variable
+	apps.appname

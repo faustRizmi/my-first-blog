@@ -25,7 +25,7 @@ SECRET_KEY = ')9b^yn-qm0m%x07oo@w5g)esqth%x9_0k!n&322-a5z7skn=#r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [('nightowlrc17.pythonanywhere.com'),('127.0.0.1')]
 
 
 # Application definition
@@ -76,15 +76,25 @@ WSGI_APPLICATION = 'mobileApp.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mobileApp',
-        'USER': 'root',
-        'PASSWORD': 'cdAr4bL1Nk',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
+    'default':  {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
 }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql', or .mysql .oracle
+#         'NAME': 'mydatabase',
+#         'USER': 'mydatabaseuser',
+#         'PASSWORD': 'mypassword',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
+
 
 
 
