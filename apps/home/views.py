@@ -9,24 +9,24 @@ from apps.home.models import UsersAccount
 from apps.home.forms import UsersAccountForm
 
 # Create your views here.
-def home(request):
+def home(request): #Home Page
 	template = loader.get_template('home/home.html')
 	return HttpResponse (template.render(request))
 
 
-def signin(request):
+def signin(request): #Sign in Page
 	template = loader.get_template('home/signin.html')
 	return HttpResponse (template.render(request))
 
 
 
-def signup(request):
+def signup(request): # Sign up Page		
 	if request.method == "POST":
-		form = usersAccountForm(request.POST)
+		form = UsersAccountForm(request.POST)
 		if form.is_valid():
 			post=form.save()
 			post.save()
 	else:
-		form = usersAccountForm()
+		form = UsersAccountForm()
 	return render(request,'home/signup.html',{'form': form})
 
