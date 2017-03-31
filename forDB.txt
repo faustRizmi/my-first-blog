@@ -4,3 +4,14 @@ DATABASES = {
         'NAME':	os.path.join(BASE_DIR, 'db.sqlite3'),
         }
 }
+
+ALLOWED_HOSTS = [('nightowlrc17.pythonanywhere.com')]
+
+
+
+deleted Apps
+from django.apps import AppConfig
+
+
+class BlogConfig(AppConfig):
+    name = 'blog'
